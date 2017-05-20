@@ -11,7 +11,7 @@ My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in E
 
 I'm employed as a software developer at Delicode Ltd, working with [NI mate](https://ni-mate.com/) and [Z-Vector](https://z-vector.com/) among other projects. My work mostly involves infrared depth sensors, computer vision, analytics & metrics, graphics programming, 3D software (Blender, Maya, Cinema 4D etc), VR, server administration, and customer support.
 
-NI mate is a software that communicates with USB depth sensors and processes their depth images into usable data. Examples of data that NI mate computes are skeleton joints from detected users, user location information and floor planes. NI mate is used for interactive adverts, motion capture, education and art installations.
+NI mate is a program that communicates with USB depth sensors and processes their depth images into usable data. Examples of data that NI mate computes are skeleton joints from detected users, user location information, and floor planes. NI mate is used for interactive adverts, motion capture, education, and art installations.
 
 Z-Vector is a real-time VJ visualization tool that creates a 3D point-cloud based visualization out of the captured depth + color feed. Z-Vector has been used for several music videos, such as Kebu - Deep Blue and Phantom - Scars.
 
@@ -81,5 +81,5 @@ Someone on IRC complained that Blender didn't have a tool for setting up sequent
 
 <iframe width="500" height="300" src="https://www.youtube.com/embed/uqbVLlJjku8" frameborder="0" allowfullscreen></iframe>
 
-A few years ago we created a short film for the Kill All Audio and Lights competition at Assembly 2009. The idea was to make a very loud and visual film that would be shown on the screen when the audience was to shut their audio systems and displays. The project included three graphics artists and one musician, with me mostly responsible for the landscape and props, as well as animation.
+We created a short film for the Kill All Audio and Lights competition at Assembly 2009. The idea was to make a very loud and visual film that would be shown on the screen when the audience was to shut their audio systems and displays. The project included three graphics artists and one musician, with me mostly responsible for the landscape and props, as well as animation.
 
