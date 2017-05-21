@@ -1,5 +1,6 @@
 # Generation of Procedural Worlds using OpenCL
 
+<datetag=2014-02-24>
 To get it straight, I'm a fan of games that feature procedural content. When I play a game I expect it be a unique experience every time I enjoy it, and generally I want to play the same game multiple times. Dwarf Fortress is naturally the most divine of the current procedural games, with many other ASCII graphic games in tow.
 
 There are many areas of procedurality, but the one that is mostly discussed is the actual geometry of the world. As Dwarf Fortress so well points out, the world's shape itself is only the canvas for the story. The most interesting part is the interaction of civilizations, the creatures that form those civiliations, and the monsters of the world. However, the world itself is the natural starting point in one's studies in procedural generation.

@@ -16,9 +16,9 @@
 </head>
 <body>
 <article class="markdown-body">
-<p>2017-05-21</p>
+<p></p>
 <h1 id="generation-of-procedural-worlds-using-opencl">Generation of Procedural Worlds using OpenCL</h1>
-<p>To get it straight, I'm a fan of games that feature procedural content. When I play a game I expect it be a unique experience every time I enjoy it, and generally I want to play the same game multiple times. Dwarf Fortress is naturally the most divine of the current procedural games, with many other ASCII graphic games in tow.</p>
+<p><datetag=2014-02-24>
 <p>There are many areas of procedurality, but the one that is mostly discussed is the actual geometry of the world. As Dwarf Fortress so well points out, the world's shape itself is only the canvas for the story. The most interesting part is the interaction of civilizations, the creatures that form those civiliations, and the monsters of the world. However, the world itself is the natural starting point in one's studies in procedural generation.</p>
 <p>The production of random world is a very discussed topic and the algorithms utilized are very well known. As I have been studying this topic I've found many different ways of performing this task, but ultimately most of the methods resorted to noise functions or voronoi cells at their core. As I read about these generators which other people had created I couldn't help to notice that almost all of them were entirely on the CPU as single-threaded programs. I was currently studying OpenCL, so I figured I'd give generating a world on the GPU a try.</p>
 <h2 id="basics">Basics</h2>

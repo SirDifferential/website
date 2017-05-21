@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ "$#" -ne 2 ]; then
-    echo "Usage: build.sh input.md output.html"
+if [ "$#" -ne 1 ]; then
+    echo "Usage: sh build.sh input.md"
     exit 1
 fi
 
@@ -11,9 +11,27 @@ if [ ! -f $SRCFILE ]; then
     exit 1
 fi
 
-OUTFILE=$2
+# Output filename is the input filename, but with html
+OUTFILE=`echo $1 |sed 's/.md/.html/g'`
 
-markdown $SRCFILE > temp.html
-sed -i 's/<code>/<pre>/g' temp.html && sed -i 's/<\/code>/<\/pre>/g' temp.html
+# See if hard-coded date is used
+DATETAG=`grep -i '<datetag=' $SRCFILE`
+DATETAG_LINES=`grep -i '<datetag=' $SRCFILE | wc -l`
+
+# convert markdown into hmtl
+pandoc -f markdown -t html $SRCFILE > temp.html
+
+# copy the base html page and replace the blog contents tag with the newly generated html
 sed -e '/<blogtext>/ {r temp.html
 d}' base.html > $OUTFILE
+
+if [ $DATETAG_LINES -gt 0 ]; then
+    sed -i 's/<datetag>//g' $OUTFILE
+    sed -i "s/<datetag=.*>/$DATETAG/g" $OUTFILE
+else
+    # Append current date in the date tag
+    sed -i "s/<datetag>/<datetag=`date -I`>/g" $OUTFILE
+fi
+
+rm temp.html
+

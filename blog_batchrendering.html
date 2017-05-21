@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Jesse Kaukonen</title>
+<link rel="stylesheet" href="github-markdown.css">
+<style>
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+    }
+</style>
+</head>
+<body>
+<article class="markdown-body">
+<p></p>
+<h1 id="batch-rendering-in-blender">Batch Rendering in Blender</h1>
+<p><datetag=2013-02-15>
+<p>Sssampo on #blenderaid on Freenode recently asked why Blender doesn't have a batch rendering tool like 3ds Max does. After giving him a few lines of Python that achieved this task I wondered the question myself: Why such an obvious tool doesn't exist?</p>
+<p>So I created it myself.</p>
+<p><a href="http://blenderartists.org/forum/showthread.php?281647-Setting-up-batch-render-tasks-(multiple-sequential-renders)">http://blenderartists.org/forum/showthread.php?281647-Setting-up-batch-render-tasks-(multiple-sequential-renders)</a></p>
+<p>The tool is simple: You add sets (or batches) and give each of them some settings: What is the starting frame, what is the ending frame, at what resolution is the set rendered, what camera and layers are used &amp;c. Blender's UI programming is relatively easy, but there are a few things to learn. For one, I didn't figure out a good way to remove elements from a bpy.props.CollectionProperty since:</p>
+<p>It's a bad idea to delete from a list while iterating it You can't copy objects that are stored in bpy.context.scene easily (not even copy.deepcopy works) So I made a few nasty hacks that &quot;work&quot; well enough. I hope those don't come back haunting at me some time in future. I probably will add a few more things in script if people ask for them, but as far as I understand the script works already and makes the workflow easier. You no longer have to put 4000 frames rendering for half a day, then come visit your computer every hour to see if you can start rendering the next batch of frames.</p>
+<div class="figure">
+<img src="pics/batchrender.png" title="pic1" />
+</div>
+<p>The code is on <a href="https://github.com/Roisack/batch_render">Github</a></p>
+</article>
+</body>
+</html>
