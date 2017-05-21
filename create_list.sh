@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sh build.sh main.md
+sh build.sh index.md
 
 # Get all blog_*.html files
 BLOGS=`find . -name 'blog_*' |grep '\.html$'`
@@ -35,10 +35,10 @@ fi
 # Convert the generated markdown into html
 pandoc -f markdown -t html bloglist.md > bloglist.html
 
-mv main.html temp.html
+mv index.html temp.html
 
-# replace the generated bloglist html into the main html page bloglist tag
+# replace the generated bloglist html into the index html page bloglist tag
 sed -e '/<bloglist>/ {r bloglist.html
-d}' temp.html > main.html
+d}' temp.html > index.html
 rm temp.html
 
