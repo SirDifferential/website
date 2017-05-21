@@ -1,6 +1,6 @@
 # Who am I
 
-My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood. My interests lay mainly in parallel computing, 3D and graphics programming, hardware programming, video games and procedural generation. I'm not interested in web development / mobile phones if I can avoid it.
+My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood. My interests lay mainly in parallel computing, 3D and graphics programming, hardware programming, video games and procedural generation. I'm not interested in web development / mobile phones if I can avoid it. I prefer programming in C, C++ and Python.
 
 ## Professional
 
@@ -34,7 +34,7 @@ At renderfarm.fi I did coding, design, testing, customer support and server & da
 ### Proceduralis
 #### OpenCL based procedural world generator
 
-![alt text](pics/proceduralis.png "Proceduralis")
+![](pics/proceduralis.png "Proceduralis")
 
 Ever since I played Dwarf Fortress I've been fascinated by procedural world generation. I had studied the basic tools used by such games, but never truly implemented them in practise. As I got into studying some OpenCL I suddenly figured it would be fun to create a world using the GPU's immense computational power. You can read more about this project in the relevant [blog entry](http://jessekaukonen.blogspot.fi/2014/02/generation-of-procedural-worlds-using.html).
 
@@ -43,7 +43,7 @@ Ever since I played Dwarf Fortress I've been fascinated by procedural world gene
 ### Improved Netmelee Mod
 #### Star Control 2 online play improvement
 
-![alt text](pics/balancemod.png "balance mod")
+![](pics/balancemod.png "balance mod")
 
 Originally created by the fellow going by the username Shiver, the Improved Netmelee Mod balances the very broken multiplayer supermelee of Star Control 2. The mod has been a work of love by Shiver, and to lesser part by myself and a few other people.  I was mostly involved in testing early on, but performed some development and maintaining tasks later on.
 
@@ -52,7 +52,7 @@ Originally created by the fellow going by the username Shiver, the Improved Netm
 ### Global Tech
 #### Europa Univeralis 4 modification
 
-![alt text](pics/gtech.jpg "Global Tech")
+![](pics/gtech.jpg "Global Tech")
 
 A product of one day during which I wondered how EU4 would work if every nation in the game used western tech. After a spell of scripting the results were so fun I decided to publish the mod.
 
@@ -70,7 +70,7 @@ Right, maybe I might have been slightly tired when I did this.
 ### batchrender.py
 #### Sequential rendering plugin for Blender
 
-![alt text](pics/batchrender.png "batchrender")
+![](pics/batchrender.png "batchrender")
 
 Someone on IRC complained that Blender didn't have a tool for setting up sequential render tasks that the computer would automatically execute in a queue. As the Blender's Python API is pretty clear it didn't take long for me to write such a tool.
 

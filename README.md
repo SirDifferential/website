@@ -4,5 +4,3 @@ Generate one webpage: `sh build.sh input.md`
 Generate listing: `sh create_list.sh`
 
 I'm not much for frameworks.
-
-[http://jessekaukonen.net](http://jessekaukonen.net)
