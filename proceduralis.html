@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <title>Jesse Kaukonen</title>
 <link rel="stylesheet" href="github-markdown.css">
+<link rel="stylesheet" href="style.css">
 <style>
     .markdown-body {
         box-sizing: border-box;
@@ -15,8 +16,17 @@
 </style>
 </head>
 <body>
+<div id="navbar">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./whoami.html">Who Am I</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<div id="content">
 <article class="markdown-body">
-<p>2017-05-21</p>
+<p><datetag=2017-05-21></p>
 <h1 id="generation-of-procedural-worlds-using-opencl">Generation of Procedural Worlds using OpenCL</h1>
 <p>To get it straight, I'm a fan of games that feature procedural content. When I play a game I expect it be a unique experience every time I enjoy it, and generally I want to play the same game multiple times. Dwarf Fortress is naturally the most divine of the current procedural games, with many other ASCII graphic games in tow.</p>
 <p>There are many areas of procedurality, but the one that is mostly discussed is the actual geometry of the world. As Dwarf Fortress so well points out, the world's shape itself is only the canvas for the story. The most interesting part is the interaction of civilizations, the creatures that form those civiliations, and the monsters of the world. However, the world itself is the natural starting point in one's studies in procedural generation.</p>
@@ -101,5 +111,11 @@
 <p>There was still some cleaning to do with the biome coloring. Some areas of the world were still too prevalent and the constants used for generating the precipitation and windzones may have to be fine-tuned. However, the basic idea was there.</p>
 <p>Next in my journey I will begin smoothing out the biome borders, tweaking the rivers and actually using the world for something. Be seeing you, and happy hacking!</p>
 </article>
+</div>
+<div id="footer">
+<p>
+© Copyright 2017 Jesse Kaukonen
+</p>
+</div>
 </body>
 </html>

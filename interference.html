@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <title>Jesse Kaukonen</title>
 <link rel="stylesheet" href="github-markdown.css">
+<link rel="stylesheet" href="style.css">
 <style>
     .markdown-body {
         box-sizing: border-box;
@@ -15,8 +16,17 @@
 </style>
 </head>
 <body>
+<div id="navbar">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./whoami.html">Who Am I</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<div id="content">
 <article class="markdown-body">
-<p>2017-05-21</p>
+<p><datetag=2017-05-21></p>
 <h1 id="maths-is-fun-interference-with-glsl">Maths is fun! Interference with GLSL</h1>
 <p>In this post I'll have a small tutorial on creating sort of a plasma-esque interference pattern in GLSL. I've been interested and in awe of the magic demosceners do in their art, and about two years ago I wanted to achieve that myself. I never managed to finish an intro myself, but I got a bunch of &quot;oldschool&quot; effects done. The one I'm most proud of is a simple interference pattern. To the more mathematically able of you this blog post probably won't offer much, but for someone as slow as myself it's important to explain everything in detail.</p>
 <p>I'm not discussing how to create an OpenGL context and the shader pipeline. I'll simply be pointing out how waves can be used for this effect. This will be the final effect:</p>
@@ -287,5 +297,11 @@ void main()
 </div>
 <p>I was mostly experimenting when I formulated this version. It's slower than the one written for this tutorial since I wasn't optimizing then. Also, this was made for a 4k intro. Have fun hacking!</p>
 </article>
+</div>
+<div id="footer">
+<p>
+© Copyright 2017 Jesse Kaukonen
+</p>
+</div>
 </body>
 </html>

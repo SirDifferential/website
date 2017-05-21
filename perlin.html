@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <title>Jesse Kaukonen</title>
 <link rel="stylesheet" href="github-markdown.css">
+<link rel="stylesheet" href="style.css">
 <style>
     .markdown-body {
         box-sizing: border-box;
@@ -15,8 +16,17 @@
 </style>
 </head>
 <body>
+<div id="navbar">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./whoami.html">Who Am I</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<div id="content">
 <article class="markdown-body">
-<p>2017-05-21</p>
+<p><datetag=2017-05-21></p>
 <h1 id="maths-is-even-more-fun-perlin-noise-with-glsl">Maths is even more fun: Perlin Noise with GLSL</h1>
 <p>In the last post I discussed implementing an interference pattern using GLSL. Today I'll be exploring the very commonly used Perlin Noise which has all kinds of fancy applications especially in procedural landscape generation. Once again, my blog will be explaining the functionality of the noise instead of writing a highly optimized and fast version of it. I've learned most of this stuff from other websites, but none of them really explained why anything happened in clear words. When you consider implementing a noise yourself, consider two things: 1) Use Simplex Noise instead 2) Find an optimized version that you can use instead. This algorithm must be extremely fast especially for dynamic procedural terrain generation in real time. All of this talk will be in two dimensions since that's easier.</p>
 <p>Once again, in this tutorial I shall be discussing only the ideas behind perlin noise and implementing the effect in a fragment shader. This post does not address the implementation of any OpenGL / GLSL pipelines. We are again doodling the effect on a rectangle, and use the OpenGL texture space of 0.0 - 1.0. No lights or vertex maths are considered. We have a texture of size 1024x1024 available, and we are doing conversions between [0...1024] and [0...1] space a few times.</p>
@@ -257,5 +267,11 @@ void main()
 <p>Happy hacking!</p>
 <p><img src="pics/perlin13.png" title="pic13" /> <img src="pics/perlin14.png" title="pic14" /></p>
 </article>
+</div>
+<div id="footer">
+<p>
+© Copyright 2017 Jesse Kaukonen
+</p>
+</div>
 </body>
 </html>

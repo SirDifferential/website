@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <title>Jesse Kaukonen</title>
 <link rel="stylesheet" href="github-markdown.css">
+<link rel="stylesheet" href="style.css">
 <style>
     .markdown-body {
         box-sizing: border-box;
@@ -15,13 +16,22 @@
 </style>
 </head>
 <body>
+<div id="navbar">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./whoami.html">Who Am I</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<div id="content">
 <article class="markdown-body">
-<p>2017-05-21</p>
+<p><datetag=2017-05-21></p>
 <h1 id="parallax-scrolling-with-sfml">Parallax Scrolling with SFML</h1>
 <p>Shadow of the Beast, a side-scrolling platformer released in 1989 for Amiga and later for other systems, has always had a special place in my heart. It could be described as a &quot;spare no expenses&quot; product considering that wherever one examines the game it features something truly revolutionary. In addition to the fantastic audio work by David Whittaker and the high quality artwork it also introduced something never seen in a game before - 12 levels of parallax scrolling.</p>
 <p>Consider this: You want to achieve the illusion of distance, of 3D, without introducing a third dimension in the engine. How would you proceed? Parallax is a phenomenon, for one, relevant in astronomy (another of my great loves). It describes change of position of an object in relation to other objects at different distances. If this mouthful felt hard to absorb let's think of an example:</p>
 <p>Imagine you are standing at one end of a football field (European football you yankees). Place a bottle of quality ale half way to the other end of the field, and another bottle at the very opposite end. Now, walk to the left side at your end and take a photo facing the two bottles. Next, walk some distance right and take one more shot. If you now look at these photos you can see that the APPARENT position of the bottles has changed a different amount: The bottle that is closer to you seems to move more in regards to the screen area. This is called parallax.</p>
-<p><img src="pics/parallax1.png" title="pic1" alt="alt text" /> <img src="pics/parallax2.png" title="pic2" alt="alt text" /> <img src="pics/parallax3.png" title="pic3" alt="alt text" /> <img src="pics/parallax4.png" title="pic4" alt="alt text" /></p>
+<p><img src="pics/parallax1.png" title="pic1" /> <img src="pics/parallax2.png" title="pic2" /> <img src="pics/parallax3.png" title="pic3" /> <img src="pics/parallax4.png" title="pic4" /></p>
 <p>Parallax is used in astronomy for figuring out how far and how large stars are. This is a genius system: First you wait for Earth to be precisely at its left peak in regards to the target star, take a picture, then take pictures for a duration of 6 months until the Earth completes half a circle, arriving at the opposite end of its orbit around the Sun. In these pictures the stars move different distances and their properties can be calculated.</p>
 <p>This can be applied in 2D graphics to achieve an illusion of distance by having layers of background and foreground images that move with the main camera, but contain a coefficient that slows or increases their movement. If you are doing a game in OpenGL you can achieve this by some kind of matrice calculations but I haven't really gone that way. With SFML there is already a good system for this: Views.</p>
 <p>To implement parallax we'll assume we have the following system:</p>
@@ -59,8 +69,14 @@ backgrounds.push_back(temp_bg);</code></pre>
 <p>We are not moving the background image itself (which is one, more complex way to do this). Instead, all the backgrounds are assigned a temporary View which is first assigned to the real, standard view (where the player is) and this view is then moved, as if the camera was moved a bit to the side.</p>
 <p>The result? I think it's pretty good:</p>
 <div class="figure">
-<img src="pics/parallax5.png" title="pic5" alt="alt text" /><p class="caption">alt text</p>
+<img src="pics/parallax5.png" title="pic5" />
 </div>
 </article>
+</div>
+<div id="footer">
+<p>
+© Copyright 2017 Jesse Kaukonen
+</p>
+</div>
 </body>
 </html>
