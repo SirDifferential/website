@@ -16,7 +16,7 @@ NI mate is a program that communicates with USB depth sensors and processes thei
 Z-Vector is a real-time VJ visualization tool that creates a 3D point-cloud based visualization out of the captured depth + color feed. Z-Vector has been used for several music videos, such as Kebu - Deep Blue and Phantom - Scars.
 
 ### Tmi Jesse Kaukonen
-#### Enterpreneur (2010-2017)
+#### Entrepreneur (2010-2017)
 
 I ran my own business for several years, doing a few odd jobs here and there. This was mostly for some secondary income. I mostly did programming, consulting and 3D modelling.
 
