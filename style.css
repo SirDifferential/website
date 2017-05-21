@@ -1,0 +1,40 @@
+div#content {
+    text-align: left;
+    margin: 0 auto;
+}
+
+div#content ul {
+    list-style-type: none;
+}
+
+div#navbar {
+    text-align: center;
+}
+
+div#navbar ul {
+    display: inline-block;
+}
+
+div#navbar li {
+    display:inline-block;
+}
+
+div#navbar li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 14px 25px;
+}
+
+div#navbar li:not(:last-child) { 
+    border-right:solid 1px #000000;
+}
+
+div#navbar li a:hover {
+    background-color: #e6e6e6;
+    color: #000000;
+}
+
+#footer {
+    text-align: center;
+}
+

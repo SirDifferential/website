@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <title>Jesse Kaukonen</title>
 <link rel="stylesheet" href="github-markdown.css">
+<link rel="stylesheet" href="style.css">
 <style>
     .markdown-body {
         box-sizing: border-box;
@@ -15,6 +16,15 @@
 </style>
 </head>
 <body>
+<div id="navbar">
+    <ul>
+        <li><a href="./main.html">Home</a></li>
+        <li><a href="./whoami.html">Who Am I</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<div id="content">
 <article class="markdown-body">
 <p></p>
 <h1 id="the-network-connection-has-gone-out-of-synch">The Network Connection Has Gone Out of Synch</h1>
@@ -60,5 +70,11 @@ BUILD_COLOR (MAKE_RGB15 (0x00, 0x00, 0x00), 0x00)   // BLACK_COLOR</code></pre>
 <p>Point 2 here is the main issue. Every time the OOS happened, it usually was right at the start of the match. We had noticed earlier that the it occurred when a player pressed one of his movement keys. Of course we immediately started ruthless debugging for the ships that were involved in that match, not the one that occurred earlier. The thing is that while the Ilwrath's death animation is playing the two sides aren't sending any RNG based data to each other. But when new ships spawn the game is already in different states. As the bug manifested in the match that FOLLOWED Ilwrath we never quite figured out why seemingly random pairs of ships always produced the issue.</p>
 <p>It didn't help that Star Control 2 code is C from the early 90s. The fix was <a href="https://github.com/Roisack/Shiver-Balance-Mod/commit/c80bfe7544f53c662d88a33ed7b9b4b497eff78d">this</a>.</p>
 </article>
+</div>
+<div id="footer">
+<p>
+© Copyright 2017 Jesse Kaukonen
+</p>
+</div>
 </body>
 </html>

@@ -7,3 +7,4 @@ do
     sh build.sh $f
 done
 
+sh create_list.sh

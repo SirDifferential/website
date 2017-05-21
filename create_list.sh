@@ -33,7 +33,7 @@ if [ $RETCODE != 0 ]; then
 fi
 
 # Convert the generated markdown into html
-sh build.sh bloglist.md
+pandoc -f markdown -t html bloglist.md > bloglist.html
 
 mv main.html temp.html
 
