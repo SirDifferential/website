@@ -36,7 +36,7 @@ At renderfarm.fi I did coding, design, testing, customer support and server & da
 
 ![](pics/proceduralis.png "Proceduralis")
 
-Ever since I played Dwarf Fortress I've been fascinated by procedural world generation. I had studied the basic tools used by such games, but never truly implemented them in practise. As I got into studying some OpenCL I suddenly figured it would be fun to create a world using the GPU's immense computational power. You can read more about this project in the relevant [blog entry](http://jessekaukonen.blogspot.fi/2014/02/generation-of-procedural-worlds-using.html).
+Ever since I played Dwarf Fortress I've been fascinated by procedural world generation. I had studied the basic tools used by such games, but never truly implemented them in practise. As I got into studying some OpenCL I suddenly figured it would be fun to create a world using the GPU's immense computational power. You can read more about this project in the relevant [blog entry](./blog_proceduralis.html).
 
 [Github link](https://github.com/SirDifferential/proceduralis)
 
