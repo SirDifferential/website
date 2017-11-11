@@ -83,3 +83,14 @@ Someone on IRC complained that Blender didn't have a tool for setting up sequent
 
 We created a short film for the Kill All Audio and Lights competition at Assembly 2009. The idea was to make a very loud and visual film that would be shown on the screen when the audience was to shut their audio systems and displays. The project included three graphics artists and one musician, with me mostly responsible for the landscape and props, as well as animation.
 
+### Haba-ipa
+#### Beer brewing documentary
+
+<iframe width="500" height="300" src="https://www.youtube.com/embed/kvvKGE30-6k" frameborder="0" allowfullscreen></iframe>
+
+Olutkulttuuriseura, a beer association in Finland, organized a beer brewing competition for the annual party in 2017. The members in the Helsinki region got together to brew a beer together. As part of this I filmed a documentary about how the beer was made. This video was targeted mainly at people interested in beer while also serving as a publicity stunt to broaden the understanding about beer culture.
+
+The filming was done using one Sony handheld camcorder that had a really low quality mic and some exposure problems. The audio had some noise in it that I didn't bother fixing.
+
+Special thanks to the brewing meister for allowing to film this as well as offering critique on the footage. The assorted members of Olutkulttuuriseura also assisted. Kristian Kristola, Mika Saari and RantingHuman offered me critique.
+
