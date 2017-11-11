@@ -1,3 +1,4 @@
+* 2017-11-11 ["Haba-IPA", the beer documentary](./blog_habaipa.html)
 * 2014-02-24 [Generation of Procedural Worlds using OpenCL](./blog_proceduralis.html)
 * 2013-07-05 [Parallax Scrolling with SFML](./blog_parallax.html)
 * 2013-06-24 [24 hours later](./blog_gamejam1.html)
