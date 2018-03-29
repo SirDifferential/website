@@ -6,3 +6,5 @@
 
 IRC: Gekko @ Freenode, IRCnet, Quakenet (use /whois to make sure, other people use Gekko as their nick as well)
 
+[GPG Public key](./gpg.txt)
+
