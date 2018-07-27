@@ -26,8 +26,12 @@ sed -e '/<blogtext>/ {r temp.html
 d}' base.html > $OUTFILE
 
 if [ $DATETAG_LINES -gt 0 ]; then
+    # Extract the date
+    DATESTR=`echo $DATETAG | sed 's/datetag=//g' | sed 's/<//g' | sed 's/>//g'`
+
+    # Create a date tag to be used in page listing and create a date subtitle
     sed -i 's/<datetag>//g' $OUTFILE
-    sed -i "s/<datetag=.*>/$DATETAG/g" $OUTFILE
+    sed -i "s/<datetag=.*>/$DATETAG\n<p class=\"datesubtitle\">$DATESTR<\/p>/g" $OUTFILE
 else
     # Append current date in the date tag
     sed -i "s/<datetag>/<datetag=`date -I`>/g" $OUTFILE

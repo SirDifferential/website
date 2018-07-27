@@ -38,3 +38,8 @@ div#navbar li a:hover {
     text-align: center;
 }
 
+.datesubtitle {
+    font-size: 14pt;
+    color: gray;
+}
+

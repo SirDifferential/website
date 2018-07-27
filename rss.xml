@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<atom:link href="https://jessekaukonen.net/rss.xml" rel="self" type="application/rss+xml" />
+<title>Jesse Kaukonen</title>
+<link>https://jessekaukonen.net</link>
+<description>Jesse Kaukonen</description>
+<item>
+	<title>"Haba-IPA", the beer documentary</title>
+	<link>https://jessekaukonen.net/./blog_habaipa.html</link>
+	<guid>https://jessekaukonen.net/./blog_habaipa.html</guid>
+	<pubDate>Sat, 11 Dec 2017 00:00:00 GMT</pubDate>
+	<description>"Haba-IPA", the beer documentary: https://jessekaukonen.net/./blog_habaipa.html</description>
+</item>
+<item>
+	<title>Generation of Procedural Worlds using OpenCL</title>
+	<link>https://jessekaukonen.net/./blog_proceduralis.html</link>
+	<guid>https://jessekaukonen.net/./blog_proceduralis.html</guid>
+	<pubDate>Mon, 24 Mar 2014 00:00:00 GMT</pubDate>
+	<description>Generation of Procedural Worlds using OpenCL: https://jessekaukonen.net/./blog_proceduralis.html</description>
+</item>
+<item>
+	<title>Parallax Scrolling with SFML</title>
+	<link>https://jessekaukonen.net/./blog_parallax.html</link>
+	<guid>https://jessekaukonen.net/./blog_parallax.html</guid>
+	<pubDate>Fri, 05 Aug 2013 00:00:00 GMT</pubDate>
+	<description>Parallax Scrolling with SFML: https://jessekaukonen.net/./blog_parallax.html</description>
+</item>
+<item>
+	<title>24 hours later</title>
+	<link>https://jessekaukonen.net/./blog_gamejam1.html</link>
+	<guid>https://jessekaukonen.net/./blog_gamejam1.html</guid>
+	<pubDate>Mon, 24 Jul 2013 00:00:00 GMT</pubDate>
+	<description>24 hours later: https://jessekaukonen.net/./blog_gamejam1.html</description>
+</item>
+<item>
+	<title>Batch Rendering in Blender</title>
+	<link>https://jessekaukonen.net/./blog_batchrendering.html</link>
+	<guid>https://jessekaukonen.net/./blog_batchrendering.html</guid>
+	<pubDate>Fri, 15 Mar 2013 00:00:00 GMT</pubDate>
+	<description>Batch Rendering in Blender: https://jessekaukonen.net/./blog_batchrendering.html</description>
+</item>
+<item>
+	<title>Maths is even more fun: Perlin Noise with GLSL</title>
+	<link>https://jessekaukonen.net/./blog_perlin.html</link>
+	<guid>https://jessekaukonen.net/./blog_perlin.html</guid>
+	<pubDate>Sun, 03 Mar 2013 00:00:00 GMT</pubDate>
+	<description>Maths is even more fun: Perlin Noise with GLSL: https://jessekaukonen.net/./blog_perlin.html</description>
+</item>
+<item>
+	<title>Maths is fun! Interference with GLSL</title>
+	<link>https://jessekaukonen.net/./blog_interference.html</link>
+	<guid>https://jessekaukonen.net/./blog_interference.html</guid>
+	<pubDate>Fri, 01 Mar 2013 00:00:00 GMT</pubDate>
+	<description>Maths is fun! Interference with GLSL: https://jessekaukonen.net/./blog_interference.html</description>
+</item>
+<item>
+	<title>The Network Connection Has Gone Out of Synch</title>
+	<link>https://jessekaukonen.net/./blog_out_of_sync.html</link>
+	<guid>https://jessekaukonen.net/./blog_out_of_sync.html</guid>
+	<pubDate>Sat, 27 Nov 2012 00:00:00 GMT</pubDate>
+	<description>The Network Connection Has Gone Out of Synch: https://jessekaukonen.net/./blog_out_of_sync.html</description>
+</item>
+</channel>
+</rss>
