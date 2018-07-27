@@ -29,10 +29,12 @@
 <p></p>
 <h1 id="maths-is-fun-interference-with-glsl">Maths is fun! Interference with GLSL</h1>
 <p><datetag=2013-02-01>
+<p class="datesubtitle">2013-02-01</p>
 <p>In this post I'll have a small tutorial on creating sort of a plasma-esque interference pattern in GLSL. I've been interested and in awe of the magic demosceners do in their art, and about two years ago I wanted to achieve that myself. I never managed to finish an intro myself, but I got a bunch of &quot;oldschool&quot; effects done. The one I'm most proud of is a simple interference pattern. To the more mathematically able of you this blog post probably won't offer much, but for someone as slow as myself it's important to explain everything in detail.</p>
 <p>I'm not discussing how to create an OpenGL context and the shader pipeline. I'll simply be pointing out how waves can be used for this effect. This will be the final effect:</p>
 <div class="figure">
 <img src="pics/interference1.png" title="pic1" />
+
 </div>
 <p>The Vertex shader does nothing fancy:</p>
 <pre><code>varying vec2 texcoord;
@@ -47,6 +49,7 @@ void main()
 <p>The waves are generated using a circular gradient. This is is calculated simply with the formula:</p>
 <div class="figure">
 <img src="pics/interference2.png" title="pic2" />
+
 </div>
 <p>The fragment shader for this is</p>
 <pre><code>varying vec2 texcoord;
@@ -66,10 +69,12 @@ void main()
 <p>This produces the following pattern:</p>
 <div class="figure">
 <img src="pics/interference3.png" title="pic3" />
+
 </div>
 <p>It's a circle alright, but it's located at the corner. Let's center it by giving the function positional parameters:</p>
 <div class="figure">
 <img src="pics/interference4.png" title="pic4" />
+
 </div>
 <p>In the fragment shader, change the line</p>
 <pre><code>color.r = sqrt(i*i + j*j);</code></pre>
@@ -78,10 +83,12 @@ void main()
 <p>In the 0.0 - 1.0 coordinate space the circle is now centered.</p>
 <div class="figure">
 <img src="pics/interference5.png" title="pic5" />
+
 </div>
 <p>Now let's add some waves on the gradient. As we have so far simply been calculating the intensity of the circular gradient we can get waves by applying a sine function on this intensity:</p>
 <div class="figure">
 <img src="pics/interference6.png" title="pic6" />
+
 </div>
 <p>I reformatted the shader a bit to make it easier to read.</p>
 <pre><code>varying vec2 texcoord;
@@ -105,10 +112,12 @@ void main()
 }</code></pre>
 <div class="figure">
 <img src="pics/interference7.png" title="pic7" />
+
 </div>
 <p>It's looking cyclic now. Time to add movement!</p>
 <div class="figure">
 <img src="pics/interference8.png" title="pic8" />
+
 </div>
 <p>Parameters t and v are time and velocity: Time is given by the main program to the shader, and velocity is used to control the speed of the wave.</p>
 <pre><code>varying vec2 texcoord;
@@ -137,17 +146,21 @@ void main()
 <p>Now let's consider what an interference is: It's the effect of two wavefronts colliding. This means something like this (pro photoshop skills):</p>
 <div class="figure">
 <img src="pics/interference9.png" title="pic9" />
+
 </div>
 <p>In the picture there are two waves: Wave 1 at top left, wave 2 at top right. At the middle we see the area in dark yellow showing the effect of interference. Thus, the next step is to move our original wave to the top left corner, and add another wave to the top right. I'm making the following mathematical definition now:</p>
 <div class="figure">
 <img src="pics/interference10.png" title="pic10" />
+
 </div>
 <div class="figure">
 <img src="pics/interference11.png" title="pic11" />
+
 </div>
 <p>I have taken our original full formula and assigned it into two variables W1 and W2 (waves 1 and 2). The coordinate parameter is what defines where the wave will be located, and must be different for the two waves. Now comes the fun part: Let's add these waves together!</p>
 <div class="figure">
 <img src="pics/interference12.png" title="pic12" />
+
 </div>
 <p>The shader begins to grow a lot now:</p>
 <pre><code>varying vec2 texcoord;
@@ -180,10 +193,12 @@ void main()
 }</code></pre>
 <div class="figure">
 <img src="pics/interference13.png" title="pic13" />
+
 </div>
 <p>Lovely! However, it's kind of dull. The waves are simply oscillating left and right when we would like them zooming around, creating chaotic patterns in still beautiful fashion. Let's make the waves more around:</p>
 <div class="figure">
 <img src="pics/interference14.png" title="pic14" />
+
 </div>
 <p>And the shader:</p>
 <pre><code>varying vec2 texcoord;
@@ -218,13 +233,16 @@ void main()
 <p>The effect:</p>
 <div class="figure">
 <img src="pics/interference15.png" title="pic15" />
+
 </div>
 <p>That's VERY different. As the waves are coming at different angles we are getting these cool cells in the pattern. It's something resembling a moire effect as well. Ok, let's get wilder: Both waves move, and we'll add more colours.</p>
 <div class="figure">
 <img src="pics/interference16.png" title="pic16" />
+
 </div>
 <div class="figure">
 <img src="pics/interference17.png" title="pic17" />
+
 </div>
 <p>We are using different times to make the movement seem less symmetrical. Note that all the sine functions are now turned into absolute values: Sine produces values from -1 to 0 half the times, and those offset our waves outside the 0.0 - 1.0 rectangle. By always keeping the values absolute the wave is always visible.</p>
 <p><img src="pics/interference18.png" title="pic18" /> <img src="pics/interference19.png" title="pic19" /> <img src="pics/interference20.png" title="pic20" /></p>
@@ -263,6 +281,7 @@ void main()
 }</code></pre>
 <div class="figure">
 <img src="pics/interference21.png" title="pic21" />
+
 </div>
 <p>That's beginning to look like something. Can we do more? Yeah, but that's up to you. The idea is to mix these waves (there can be more than two, of course) and see what kind of effects are produced by introducing new operators. The first image in the header is produced by this monster:</p>
 <pre><code>varying vec2 texcoord;
@@ -295,14 +314,15 @@ void main()
 }</code></pre>
 <div class="figure">
 <img src="pics/interference1.png" title="pic1" />
+
 </div>
 <p>I was mostly experimenting when I formulated this version. It's slower than the one written for this tutorial since I wasn't optimizing then. Also, this was made for a 4k intro. Have fun hacking!</p>
 </article>
 </div>
 <div id="footer">
-<p>
-© Copyright 2017 Jesse Kaukonen
-</p>
+<p><a href="./rss.xml"><img src="./rss.svg" width="25px"></img></a></p>
+<p><img src="./cc.png"></img></p>
+<p>This work is licensed under a</p> <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License.</a></p>
 </div>
 </body>
 </html>

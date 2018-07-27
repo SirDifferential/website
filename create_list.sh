@@ -32,6 +32,8 @@ if [ $RETCODE != 0 ]; then
     exit 1
 fi
 
+python3 ./create_rss.py ./bloglist.md ./rss.xml
+
 # Convert the generated markdown into html
 pandoc -f markdown -t html bloglist.md > bloglist.html
 

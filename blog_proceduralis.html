@@ -29,6 +29,7 @@
 <p></p>
 <h1 id="generation-of-procedural-worlds-using-opencl">Generation of Procedural Worlds using OpenCL</h1>
 <p><datetag=2014-02-24>
+<p class="datesubtitle">2014-02-24</p>
 <p>There are many areas of procedurality, but the one that is mostly discussed is the actual geometry of the world. As Dwarf Fortress so well points out, the world's shape itself is only the canvas for the story. The most interesting part is the interaction of civilizations, the creatures that form those civiliations, and the monsters of the world. However, the world itself is the natural starting point in one's studies in procedural generation.</p>
 <p>The production of random world is a very discussed topic and the algorithms utilized are very well known. As I have been studying this topic I've found many different ways of performing this task, but ultimately most of the methods resorted to noise functions or voronoi cells at their core. As I read about these generators which other people had created I couldn't help to notice that almost all of them were entirely on the CPU as single-threaded programs. I was currently studying OpenCL, so I figured I'd give generating a world on the GPU a try.</p>
 <h2 id="basics">Basics</h2>
@@ -41,10 +42,12 @@
 <p>Now I had the basic tools for generating the most apparent shape of my world. Combining these two maps was relatively simple: I took my continent color from the voronoi sprite and used the green color channel as height. I took this height and multiplied it by the perlin noise, interpolating to the range of [0.5, 1.25] thus forming a somewhat more random height. The result wasn't too impressive, but it was the basic shape. I chose some number to work as a limit for ocean level:</p>
 <div class="figure">
 <img src="pics/procedural_worlds001.png" title="pic1" />
+
 </div>
 <p>At this point I had some major issues with the level of randomness in my original data. It seemed like I was mostly getting either too large mega-continents or isolated blob islands. In addition, due to my Voronoi distance function my Voronoi cells were somewhat rectangular, forming nasty shapes. I solved this by writing an OpenCL blur kernel and, for both Voronoi cells and Perlin noise, performing a wide gaussian blur (10-20 pixels in radius). Then I combined the textures the same way:</p>
 <div class="figure">
 <img src="pics/procedural_worlds002.png" title="pic2" />
+
 </div>
 <p>At this point I had decent-enough continents, although I was hoping to improve the shapes in future. I decided that the core idea was there and could be easily changed by a different function in future. I moved on.</p>
 <p>I had generated the smaller Voronoi cells and intended them to split the world to smaller regions. Due to my blur function I had two choices for using this data: In its original, rectangular form, or in the blurred smooth mess. After some benchmarks I went for the following function for describing the world height:</p>
@@ -52,12 +55,14 @@
 <p>With the way I initiliazed my random data and generated the noise, I now could do a simple filter: Anything lower than the height of 0.17 is ocean. The result:</p>
 <div class="figure">
 <img src="pics/procedural_worlds003.png" title="pic3" />
+
 </div>
 <p>I was happy with the core shape of my world. However, there was one area I hoped to solve before moving on, and that was detecting regions: In Dwarf Fortres, when one hovers over the world map the game will tell in which area the cursor is currently in. This was fascinating to me and I wondered how such a task could be completed. After some searching I found the term &quot;Connected Component Labeling&quot; and spent a day reading academic papers on the topic. One of the most common methods of performing this &quot;paint fill tool&quot; (like it's in MS paint!) was by using a recursive neighbor search. This algorithm worked by first selecting the very first element and checking all the eight neighbors for this pixel. If the pixels shared some property (in this case, a height of a defined range), the pixels were part of the same region. If the pixels were part of the region, then, recursively, the algorithm marked the neighboring pixels as the &quot;current pixel&quot;. This algorithm worked well in theory, but failed in practise. The problem was that I had areas that were millions of pixels in size and no programming language allowed that deep recursion trees. I was forced to search something else.</p>
 <p>Stackoverflow.com had a suggestion for a similar problem. This idea involved replacing the recursive search by a stack structure: Instead of performing a recursive function call, all the &quot;matching neighbor pixels&quot; were added to a stack of pixels that needed to be checked. When the stack was empty, the region search was finished. This method was perfect and completed the search in a relatively fast time. I'm sure it's possible to improve the speed, but it's I doubt great improvement can be gained with easy solutions. Unfortunately, I could not figure out a way to perform the Connected Component Labeling using OpenCL - the problem might be single-threaded in its nature.</p>
 <p>Using the region labeling I assigned all my pixels to some region and classified specific types of regions to a specific range of codes. All oceans (water pixels that covered a region greater than a set amount) had an identification number less than 5000, all hills were labeled from 5000 to 10000, mountains had 10000 to 20000, and the rest was reserved for flat regions.</p>
 <div class="figure">
 <img src="pics/procedural_worlds004.png" title="pic4" />
+
 </div>
 <p>The algorithm <a href="https://github.com/SirDifferential/proceduralis/blob/master/source/worldGenerator.cpp#L158">in my source</a>.</p>
 <p>The reason I had performed this task was to make it easy to solve the next area in my procedural world's life cycle. That being...</p>
@@ -66,23 +71,28 @@
 <p>More reading of academic papers followed. With mostly nothing practical gained I moved on to reading articles and blogs written by others who had tackled this problem. One such person was Ebyan Alvarez-Buylla at <a href="http://www.dungeonleague.com/2010/03/28/wind-direction/">nolithius.com</a>. He had an interesting idea: Generate climate zones by using our planet's wind circulation:</p>
 <div class="figure">
 <img src="pics/procedural_worlds005.jpg" title="pic5" />
+
 </div>
 <p>Choose arbitrary wind directions for each of the areas, and use linear interpolation to smooth the areas between the &quot;wind borders&quot;. This produced large wind currents on the world that could be used for simulating cloud movement. He also suggested distorting this smoothed out wind map by using fractal brownian motion to form kind of jet trails, and I copied this idea as well.</p>
 <div class="figure">
 <img src="pics/procedural_worlds006.png" title="pic6" />
+
 </div>
 <p>The basic idea: Colors signify directions. Dark green is south, bright red is east, dark red is north, dark blue is west.</p>
 <div class="figure">
 <img src="pics/procedural_worlds007.png" title="pic7" />
+
 </div>
 <p>Distorting the map using perlin noise to produce jagged outlines.</p>
 <div class="figure">
 <img src="pics/procedural_worlds008.png" title="pic8" />
+
 </div>
 <p>Near complete version. The yellow lines are a few chosen simulation points that I asked my program to solve. The points were placed at arbitrary locations, and continued to follow the winds for 1000 steps. The implementation <a href="https://github.com/SirDifferential/proceduralis/blob/master/winddirection.cl">in OpenCL</a>.</p>
 <p>With the wind map generated the next step was easy. All I had to do was write an algorithm that calculated rainfall for point (x,y) by &quot;flying upwind&quot;. The algorithm had to pay attention to the general distance it took to hit ocean (the source of rainfall), and record any hills and mountains met (rain shadow sources). I also ran my wind direction map through the blur kernel to smooth some artifacts out.</p>
 <div class="figure">
 <img src="pics/procedural_worlds009.png" title="pic9" />
+
 </div>
 <h2 id="rivers">Rivers</h2>
 <p>As the precipitation, and thus rainfall, was generated rivers seemed trivial. I didn't expect quite as many complications as I ended up having. Turns out that the dynamics of falling water can get extremely hairy. I simplified and simplified the problem until I arrived at a decent result.</p>
@@ -90,32 +100,36 @@
 <p>Some of the earlier tries with this method were a bit ugly:</p>
 <div class="figure">
 <img src="pics/procedural_worlds010.png" title="pic10" />
+
 </div>
 <p>The habit of certain areas producing a lot of rivers caused entire mountain ranges to appear as nothing but one river. To limit this I added a random check which had to be passed for a river to form, and prevented the creation of rivers if one already existed at that location. This alone didn't solve the problem, so I made a relatively simple tweak: If one neighboring pixel is a river, merge these rivers and contiune the search for only one of the rivers.</p>
 <p>The outcome was better, but future work must be done to improve the lowlands:</p>
 <div class="figure">
 <img src="pics/procedural_worlds011.png" title="pic11" />
+
 </div>
 <p>The issue with lowlands here is that large regions without mountains do not form rivers at all. To solve this, in future I will have to add some kind of special lowland-river-routine that works separately. I implemented the river code on the CPU. There might be a way to do the rivers in parallel, but it needs some further thinking. <a href="https://github.com/SirDifferential/proceduralis/blob/master/source/worldGenerator.cpp#L680">My implementation</a>.</p>
 <h2 id="temperature">Temperature</h2>
 <p>By calculating the distance from the meridian and offsetting it a tiny bit by some select trigonometric functions I achieved the following temperature field:</p>
 <div class="figure">
 <img src="pics/procedural_worlds012.png" title="pic12" />
+
 </div>
 <p>I did not really spend much time on this - it seemed unnecessary. Planetary temperatures are pretty straightforward and based mostly on latitude. Of course, oceanic currents are relevant: Europe would be a lot colder if it wasn't for the Gulf Stream. However, these thoughts were unimportant as of now.</p>
 <h2 id="biomes">Biomes</h2>
 <p>With all the data computed earlier in the program biomes were almost trivial - all that was needed was a simple OpenCL program that checked the various values for each pixel and deduced the biome type from this. In my case, I first lowered temperature based on height (high mountains are cold) and marked the mountain regions with their own colors. Then I moved to considering the balance of precipitation and temperature and formed areas from arctic to tropical rainforest.</p>
 <div class="figure">
 <img src="pics/procedural_worlds013.png" title="pic13" />
+
 </div>
 <p>There was still some cleaning to do with the biome coloring. Some areas of the world were still too prevalent and the constants used for generating the precipitation and windzones may have to be fine-tuned. However, the basic idea was there.</p>
 <p>Next in my journey I will begin smoothing out the biome borders, tweaking the rivers and actually using the world for something. Be seeing you, and happy hacking!</p>
 </article>
 </div>
 <div id="footer">
-<p>
-© Copyright 2017 Jesse Kaukonen
-</p>
+<p><a href="./rss.xml"><img src="./rss.svg" width="25px"></img></a></p>
+<p><img src="./cc.png"></img></p>
+<p>This work is licensed under a</p> <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License.</a></p>
 </div>
 </body>
 </html>

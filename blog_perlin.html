@@ -29,6 +29,7 @@
 <p></p>
 <h1 id="maths-is-even-more-fun-perlin-noise-with-glsl">Maths is even more fun: Perlin Noise with GLSL</h1>
 <p><datetag=2013-02-03>
+<p class="datesubtitle">2013-02-03</p>
 <p>In the last post I discussed implementing an interference pattern using GLSL. Today I'll be exploring the very commonly used Perlin Noise which has all kinds of fancy applications especially in procedural landscape generation. Once again, my blog will be explaining the functionality of the noise instead of writing a highly optimized and fast version of it. I've learned most of this stuff from other websites, but none of them really explained why anything happened in clear words. When you consider implementing a noise yourself, consider two things: 1) Use Simplex Noise instead 2) Find an optimized version that you can use instead. This algorithm must be extremely fast especially for dynamic procedural terrain generation in real time. All of this talk will be in two dimensions since that's easier.</p>
 <p>Once again, in this tutorial I shall be discussing only the ideas behind perlin noise and implementing the effect in a fragment shader. This post does not address the implementation of any OpenGL / GLSL pipelines. We are again doodling the effect on a rectangle, and use the OpenGL texture space of 0.0 - 1.0. No lights or vertex maths are considered. We have a texture of size 1024x1024 available, and we are doing conversions between [0...1024] and [0...1] space a few times.</p>
 <h2 id="what-perlin-noise-is">What Perlin Noise is?</h2>
@@ -49,6 +50,7 @@ uniform sampler2D baseNoise;</code></pre>
 <p>Using this for all RGB channels I get the following effect:</p>
 <div class="figure">
 <img src="pics/perlin1.png" title="pic1" />
+
 </div>
 <h2 id="first-step-cell-noise">First step: Cell noise</h2>
 <p>Perlin noise is based heavily on this entire concept of cells within a grid, so let's begin by creating some cells. Cells are produced by calculating a coordinate (x1,y1), then calculating another coordinate (x2,y2) that is offset by some length in relation to the previous coordinate. This length shall be called unit_length in this tutorial, and defines how large cells we are using. For the purposes of some arithmetic we are converting into integer coordinate system [0...1024] from the standard float coordinates of [0...1.0].</p>
@@ -109,6 +111,7 @@ int coord_y2 = coord_y1 + unit_length;
 <p>We have to convert back to the [0...1] coordinate space in order to fetch the pixel data from our random map. The effect:</p>
 <div class="figure">
 <img src="pics/perlin2.png" title="pic2" />
+
 </div>
 <h2 id="linear-interpolation-explained">Linear interpolation explained</h2>
 <p>What we previously did was form an &quot;imaginary&quot; grid of random values. What we are now doing is calculating gradients for each fragment within the cells. This is done using linear interpolation, which is about the most important mathematical tool you will need in programming and game development.</p>
@@ -119,6 +122,7 @@ int coord_y2 = coord_y1 + unit_length;
 <p>This function is fairly simple. You give it two values x0 and x1. These two points represent some magnitudes - in our case the intensity of our two chosen noise points - and form a linear line between them. Then you give the function an alpha between 0 and 1. This alpha represents the position we are at in relation to the two points x0 and x1. Alpha of 0 would mean we are at the left end of the line, at the coordinate x0, and alpha of 1.0 would mean we are at the right end at coordinate x1. Alpha of 0.5 would mean we are in the middle. Using this chosen point alpha we then check where on this line we landed and record the value.</p>
 <div class="figure">
 <img src="pics/perlin3.png" title="pic3" />
+
 </div>
 <p>In this example picture alpha was chosen at point 0.35, so a bit left from the middle point.</p>
 <h2 id="second-step-gradient-cell-noise">Second step: Gradient cell noise</h2>
@@ -140,41 +144,49 @@ float top = interpolate(texture2D(baseNoise, vec2(coord_x1_resized, coord_y1_res
 <p>Note that I first had to convert my coordinate space back into the [0...1] range since we are sampling the texture given to the fragment shader by the main program. So, what does this look like?</p>
 <div class="figure">
 <img src="pics/perlin4.png" title="pic4" />
+
 </div>
 <p>It's looking like a cell noise, but begins to have some Perlinish appearance. Next we have to calculate a similar gradient, but for the bottom nodes of each cell:</p>
 <pre><code>float bottom = interpolate(texture2D(baseNoise, vec2(coord_x1_resized, coord_y2_resized)).r, texture2D(baseNoise, vec2(coord_x2_resized, coord_y2_resized)).r, horizontal_blend);</code></pre>
 <p>This produces a similar picture, but for the lower nodes:</p>
 <div class="figure">
 <img src="pics/perlin5.png" title="pic5" />
+
 </div>
 <p>Only one step left to do: We combine these two sets of gradients. How? Why, by linear interpolation of course!</p>
 <pre><code>float vertical_blend = (j_resized - coord_y1) * unit_alpha;
 final_noise = interpolate(top, bottom, vertical_blend);</code></pre>
 <div class="figure">
 <img src="pics/perlin6.png" title="pic6" />
+
 </div>
 <p>We have calculated our first Perlin Noise! However, it's looking kind of... bad. This is where we can begin doing anything we want with the noise, but a common way to improve it is by using <em>drums</em> fractals.</p>
 <h2 id="fractal-perlin-noise">Fractal Perlin Noise</h2>
 <p>This is actually quite simple. What we did in our above example was calculate a Perlin Noise using a fixed unit length, in this example done by splitting our coordinate space in 50 gradients (or cells). This produces an acceptable noise. Let's see what happens if we change the unit length:</p>
 <div class="figure">
 <img src="pics/perlin7.png" title="pic7" />
+
 </div>
 <pre><code>int unit_length = scale_x/10;</code></pre>
 <div class="figure">
 <img src="pics/perlin8.png" title="pic8" />
+
 </div>
 <pre><code>int unit_length = scale_x/30;</code></pre>
 <div class="figure">
 <img src="pics/perlin9.png" title="pic9" />
+
 </div>
 <pre><code>int unit_length = scale_x/60;</code></pre>
 <div class="figure">
 <img src="pics/perlin10.png" title="pic10" />
+
 </div>
 <pre><code>int unit_length = scale_x/100;</code></pre>
 <p>The results indicate that the smaller the gradients are, the more detail there is in the produced noise. What would happen if we combined these noises?</p>
 <div class="figure">
 <img src="pics/perlin11.png" title="pic11" />
+
 </div>
 <p>We are getting there. This is a concept very close fractal functions: We are doing the same operation again and again for smaller regions, getting tinier and tinier details at every iteration. Then, using some kind of logic, we combine all these layers together and form the final noise. However, this is not very effective: Perlin Noise, as it stands, has the complexity of O(n^2) as it is, and we just increased our computation by four times. When you are implementing this type of noise you are better of googling for some algorithm that people more intelligent than myself have optimized to do this fractal part in just a single, complex line. However, let's see what we can do by doing this the slow way.</p>
 <p>We set up a bunch of arrays that contain perlin noise values for different iterations of our fractal function. I've included my final program:</p>
@@ -262,6 +274,7 @@ void main()
 }</code></pre>
 <div class="figure">
 <img src="pics/perlin12.png" title="pic12" />
+
 </div>
 <p>For every iteration we take smaller and smaller gradients. These are stored in an array of max size 20, then combined using two variables: persistence and amplitude. You can take a class on signal processing and probably understand more about this stuff than myself. The general idea though is that every layer of noise is combined with the other layers, and every time we are applying the noise at a slightly greater or lower percentage. Where do the values come from? I wrote a small program that allows me to input those into the fragment shader at will. Good values for them are: amplitude = 0.4, persistence = 0.85, octaveCount = 9.</p>
 <p>From here it's up to you to improve the noise. Things that you can do include computing multiple noises and merging them, filtering out some values, or maybe combing some other noise function with the perlin noise. Oh, also, don't use this in a real time application. There are faster algorithms.</p>
@@ -270,9 +283,9 @@ void main()
 </article>
 </div>
 <div id="footer">
-<p>
-© Copyright 2017 Jesse Kaukonen
-</p>
+<p><a href="./rss.xml"><img src="./rss.svg" width="25px"></img></a></p>
+<p><img src="./cc.png"></img></p>
+<p>This work is licensed under a</p> <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License.</a></p>
 </div>
 </body>
 </html>
