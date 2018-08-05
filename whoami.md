@@ -40,9 +40,9 @@ At renderfarm.fi I did coding, design, testing, customer support and server & da
 
 Our demo group, [PTS](http://www.pouet.net/groups.php?which=13815), released our first demo for the [Simulaatio 2018](http://www.pouet.net/party.php?which=1099&when=2018) demo party. This demo was the first time any of us worked with this hardware. Our expectations were largely limited to getting anything at all done and released, a goal we achieved after some party coding to wrap things up. As someone else put it, "It's not quite [Titan](http://www.pouet.net/prod.php?which=61724) yet, but that's the next one, right?"
 
-[Pouet link](http://www.pouet.net/prod.php?which=76304)
-[Source code](https://bitbucket.org/ptsdemos/segademo)
-[Detailed blog entry](https://jessekaukonen.net/blog_ptsd.html)
+* [Pouet link](http://www.pouet.net/prod.php?which=76304)
+* [Source code](https://bitbucket.org/ptsdemos/segademo)
+* [Detailed blog entry](https://jessekaukonen.net/blog_ptsd.html)
 
 ### Proceduralis
 #### OpenCL based procedural world generator
