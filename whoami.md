@@ -1,6 +1,6 @@
 # Who am I
 
-My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood. My interests lay mainly in parallel computing, 3D and graphics programming, hardware programming, video games and procedural generation. I'm not interested in web development / mobile phones if I can avoid it. I prefer programming in C, C++ and Python.
+My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood when I had an Amiga 500, which I still have in working order on my desk. My interests lay mainly in parallel computing, 3D and graphics programming, hardware programming, video games and procedural generation. I'm not interested in web development / mobile phones if I can avoid it. I prefer programming in C, C++ and Python.
 
 ## Professional
 
@@ -9,11 +9,13 @@ My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in E
 
 <iframe width="500" height="300" src="https://www.youtube.com/embed/A-6XqqYWzU8" frameborder="0" allowfullscreen></iframe>
 
-I'm employed as a software developer at Delicode Ltd, working with [NI mate](https://ni-mate.com/) and [Z-Vector](https://z-vector.com/) among other projects. My work mostly involves infrared depth sensors, computer vision, analytics & metrics, graphics programming, 3D software (Blender, Maya, Cinema 4D etc), VR, server administration, and customer support.
+I'm employed at [Delicode](https://www.delicode.com/) as a software developer. My work is mostly focused around infrared depth cameras, embedded devices, USB devices, computer vision, servers and customer service. I'm also the janitor for our office and ranked 3rd in our office frisbee golf ratings.
 
-NI mate is a program that communicates with USB depth sensors and processes their depth images into usable data. Examples of data that NI mate computes are skeleton joints from detected users, user location information, and floor planes. NI mate is used for interactive adverts, motion capture, education, and art installations.
+[Delicode Signals](https://signals.delicode.com) is a people counting & analytics solution using infrared depth cameras.
 
-Z-Vector is a real-time VJ visualization tool that creates a 3D point-cloud based visualization out of the captured depth + color feed. Z-Vector has been used for several music videos, such as Kebu - Deep Blue and Phantom - Scars.
+[NI mate](https://ni-mate.com) is a program that communicates with USB depth sensors and processes their depth images into usable data. Examples of data that NI mate computes are skeleton joints from detected users, user location information, and floor planes. NI mate is used for interactive adverts, motion capture, education, and art installations.
+
+[Z-Vector](https://z-vector.com) is a real-time VJ visualization tool that creates a 3D point-cloud based visualizations out of the captured depth + color feed using an infrared camera. Z-Vector has been used for several music videos, such as [Kebu - Deep Blue](https://www.youtube.com/watch?v=A-6XqqYWzU8) and [Phantom - Scars](https://www.youtube.com/watch?v=HFpou6izBQg).
 
 ### Tmi Jesse Kaukonen
 #### Entrepreneur (2010-2017)
@@ -30,6 +32,17 @@ During / after my intership at Turku Polytechnic I worked at a project called re
 At renderfarm.fi I did coding, design, testing, customer support and server & database maintenance.
 
 ## Personal
+
+### PTSD
+#### Sega Megadrive demo
+
+![](pics/ptsd_ukk.png, "PTSD")
+
+Our demo group, [PTS](http://www.pouet.net/groups.php?which=13815), released our first demo for the [Simulaatio 2018](http://www.pouet.net/party.php?which=1099&when=2018) demo party. This demo was the first time any of us worked with this hardware. Our expectations were largely limited to getting anything at all done and released, a goal we achieved after some party coding to wrap things up. As someone else put it, "It's not quite [Titan](http://www.pouet.net/prod.php?which=61724) yet, but that's the next one, right?"
+
+[Pouet link](http://www.pouet.net/prod.php?which=76304)
+[Source code](https://bitbucket.org/ptsdemos/segademo)
+[Detailed blog entry](https://jessekaukonen.net/blog_ptsd.html)
 
 ### Proceduralis
 #### OpenCL based procedural world generator
@@ -76,6 +89,20 @@ Someone on IRC complained that Blender didn't have a tool for setting up sequent
 
 [Github link](https://github.com/SirDifferential/batch_render)
 
+### Website
+#### You're reading it
+
+I don't like web app development. I don't like Javascript, PHP or nodejs. I don't like websites that hog up hundreds of megs of memory and peg the CPUs on older computers to 100%. As such, my website is made entirely out of markdown turned into HTML with minimal amounts of extra junk, always served as static files, using the Github markdown style. The pages are created using a bash script and some Python. To this day I haven't found any problems with this system.
+
+[Github link](https://github.com/sirdifferential/website)
+
+### Free software contributions
+
+Here's some projects for which I've made contributions:
+
+* [libfreenect2](https://github.com/openkinect/libfreenect2)
+* [Orbbec Astra SDK](https://github.com/orbbec/astra)
+
 ### KAAL
 #### Short film
 
@@ -93,4 +120,6 @@ Olutkulttuuriseura, a beer association in Finland, organized a beer brewing comp
 The filming was done using one Sony handheld camcorder that had a really low quality mic and some exposure problems. The audio had some noise in it that I didn't bother fixing.
 
 Special thanks to the brewing meister for allowing to film this as well as offering critique on the footage. The assorted members of Olutkulttuuriseura also assisted. Kristian Kristola, Mika Saari and RantingHuman offered me critique.
+
+[Detailed blog entry](https://jessekaukonen.net/blog_habaipa.html)
 
