@@ -53,14 +53,14 @@ Ever since I played Dwarf Fortress I've been fascinated by procedural world gene
 
 [Github link](https://github.com/SirDifferential/proceduralis)
 
-### Improved Netmelee Mod
+### Shiver's Balance Mod
 #### Star Control 2 online play improvement
 
 ![](pics/balancemod.png "balance mod")
 
-Originally created by the fellow going by the username Shiver, the Improved Netmelee Mod balances the very broken multiplayer supermelee of Star Control 2. The mod has been a work of love by Shiver, and to lesser part by myself and a few other people.  I was mostly involved in testing early on, but performed some development and maintaining tasks later on.
+Originally and mainly created by the fellow going by the username Shiver, the Balance Mod balances the very broken multiplayer supermelee of Star Control 2. The mod has been a work of love by Shiver, and to lesser part by myself and a few other people. I was mostly involved in testing early on, but performed some development and maintaining tasks later on.
 
-[Github link](https://github.com/SirDifferential/Shiver-Balance-Mod)
+[Github link](https://github.com/uqm-arena/balance-mod)
 
 ### Global Tech
 #### Europa Univeralis 4 modification
@@ -95,6 +95,13 @@ Someone on IRC complained that Blender didn't have a tool for setting up sequent
 I don't like web app development. I don't like Javascript, PHP or nodejs. I don't like websites that hog up hundreds of megs of memory and peg the CPUs on older computers to 100%. As such, my website is made entirely out of markdown turned into HTML with minimal amounts of extra junk, always served as static files, using the Github markdown style. The pages are created using a bash script and some Python. To this day I haven't found any problems with this system.
 
 [Github link](https://github.com/sirdifferential/website)
+
+### Story of a Lost Sky
+#### Touhou fangame RPG
+
+I ran into a Touhou fan project I liked, found a couple of bugs and ended up doing dedicated testing for a while.
+
+[Main site](http://featheredmelody.com/index.html)
 
 ### Free software contributions
 
