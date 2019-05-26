@@ -43,3 +43,7 @@ div#navbar li a:hover {
     color: gray;
 }
 
+li {
+	list-style: square;
+}
+
