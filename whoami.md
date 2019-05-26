@@ -33,14 +33,13 @@ At renderfarm.fi I did coding, design, testing, customer support and server & da
 
 ## Personal
 
-### PTSD
-
 #### Sonic 1 romhack
 
 ![](pics/romhack_kekkonen2.png "romhack")
 
 We created a Sonic 1 romhack for a friend's bachelor party. You can read about it in [this](https://jessekaukonen.net/blog_romhack.html) blog entry.
 
+### PTSD
 #### Sega Megadrive demo
 
 ![](pics/ptsd_ukk.png "PTSD")
