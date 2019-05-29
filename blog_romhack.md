@@ -40,7 +40,7 @@ The demo itself was planned to have a couple of effects with a scroller, nothing
 
 The party itself went well, even though both the party champ and myself were sick on the day with a cold and sinus infections. Some beer was had and the romhack portion worked without issues. [Sugoi Arcade](http://www.sugoi.fi), where we handled the romhack portion of the party, was an amazing place and the proprietor seemed like a pretty chill dude. If you're looking for an arcade experience in Helsinki and don't mind some commuting, then I can absolutely recommend this place: They had driving games, light gun shooters, fighting games, multimachine multiplayer games, rhythm games with custom instruments, and others. There also was a tarp in the shape of a flipper table in the rear, so maybe that will be playable at some point?
 
-[Download](https://plantmonster.net/pts/sonic1_romhack/sonicus1.bin) the ROM. The binary can be executed like any other Megadrive ROM in most emulators, or if you want, on real hardware. Here's the [source code](https://github.com/pts-demos/s1disasm).
+[Download](https://github.com/pts-demos/s1disasm/releases/download/1.0/sonicus1.bin) the ROM. The binary can be executed like any other Megadrive ROM in most emulators, or if you want, on real hardware. Here's the [source code](https://github.com/pts-demos/s1disasm).
 
 Credits:
 
