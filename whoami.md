@@ -33,6 +33,13 @@ At renderfarm.fi I did coding, design, testing, customer support and server & da
 
 ## Personal
 
+### Derpling Uploader
+#### Starcraft 2 replay uploader
+
+This is a tool I wrote to automatically upload Starcraft 2 replay files to sc2replaystats.com. They offer their own tool to perform the same task, but it's a closed source executable binary that requires admin privileges. I didn't feel like installing it on my computer, so I wrote my own auditable version instead.
+
+[Github link](https://github.com/SirDifferential/derpling_uploader)
+
 #### Sonic 1 romhack
 
 ![](pics/romhack_kekkonen2.png "romhack")
