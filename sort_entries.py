@@ -4,7 +4,7 @@ from dateutil.parser import parse
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print "Usage: python sort_entries.py file.md"
+        print("Usage: python sort_entries.py file.md")
         sys.exit(0)
 
     filename = sys.argv[1]
@@ -18,7 +18,7 @@ if __name__ == "__main__":
             entry["data"] = data[1][1:]
             entries.append(entry)
     except Exception as e:
-        print "Failed parsing: " + str(e)
+        print("Failed parsing: " + str(e))
         sys.exit(1)
 
     entries_sort = []
