@@ -1,3 +1,5 @@
+* 2019-05-26 [Sonic 1 bachelor party romhack](./blog_romhack.html)
+* 2018-08-05 [ptsd - Sega Megadrive demo](./blog_ptsd.html)
 * 2018-07-28 [Laskuvarjotaisto](./blog_gamejam2.html)
 * 2017-11-11 ["Haba-IPA", the beer documentary](./blog_habaipa.html)
 * 2014-02-24 [Generation of Procedural Worlds using OpenCL](./blog_proceduralis.html)
