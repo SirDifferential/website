@@ -2,8 +2,6 @@
 
 <datetag=2019-05-26>
 
-![](pics/romhack_sugoi1.jpg "sugoi1")
-
 A friend of ours, an avid Sonic fan, is getting married and it was our sacred duty to throw him a bachelor party. But what should we do there? Well, the man of the hour had lamented he didn't have time to do an invitation intro for the wedding and, as such, we decided to do just that. After some thinking we figured the stylish way to do it would be via a Sonic romhack.
 
 None of us in the pts demogroup had done a romhack earlier. Some thinking and beers later we guessed that the Sonic fan community is probably autistic enough that they've already reverse engineered all the games, and maybe with Sonic 1 the developers hadn't yet pushed the hardware to its absolute extremes, perhaps making it easier to work with the game's ROM. Thus, Sonic 1 was chosen.
