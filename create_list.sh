@@ -25,7 +25,7 @@ do
     echo "* $DATE [$HEADLINE]($b)" >> bloglist.md
 done
 
-python sort_entries.py bloglist.md
+python3 sort_entries.py bloglist.md
 RETCODE=$?
 if [ $RETCODE != 0 ]; then
     echo "Failed sorting entries"
