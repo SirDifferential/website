@@ -23,7 +23,7 @@ pandoc -f markdown -t html $SRCFILE > temp.html
 
 # copy the base html page and replace the blog contents tag with the newly generated html
 sed -e '/<blogtext>/ {r temp.html
-d}' base.html > $OUTFILE
+d}' base.template > $OUTFILE
 
 if [ $DATETAG_LINES -gt 0 ]; then
     # Extract the date
