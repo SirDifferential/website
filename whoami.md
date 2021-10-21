@@ -4,12 +4,17 @@ My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in E
 
 ## Professional
 
+### Nets Oy
+#### Payment terminals (2021 - present)
+
+At Nets my work involves credit & debit card payment terminals, mostly in LUA.
+
 ### Delicode Ltd
-#### Software developer (2014 - present)
+#### Software developer (2014 - 2021)
 
 <iframe width="500" height="300" src="https://www.youtube.com/embed/A-6XqqYWzU8" frameborder="0" allowfullscreen></iframe>
 
-I'm employed at [Delicode](https://www.delicode.com/) as a software developer. My work is mostly focused around infrared depth cameras, embedded devices, USB devices, computer vision, servers and customer service. I'm also the janitor for our office and ranked 3rd in our office frisbee golf ratings.
+I was employed at [Delicode](https://www.delicode.com/) as a software developer. My work focused around infrared depth cameras, embedded devices, USB devices, computer vision, servers and customer service.
 
 [Delicode Signals](https://signals.delicode.com) is a people counting & analytics solution using infrared depth cameras.
 
