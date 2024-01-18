@@ -1,13 +1,17 @@
 # Who am I
 
-My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood when I had an Amiga 500, which I still have in working order on my desk. My interests lay mainly in parallel computing, 3D and graphics programming, hardware programming, video games and procedural generation. I'm not interested in web development / mobile phones if I can avoid it. I prefer programming in C, C++ and Python.
+My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood when I had an Amiga 500, which I still have in working order on my desk. My interests lay mainly in parallel computing, code optimization, hardware programming, 3D and graphics programming, video games, and procedural generation. I'm not interested in web development / mobile devices if I can avoid it. I prefer programming in C for its simplicity and understandable ecosystem.
+
+Beyond software development, I also write novels and do art (mostly for the novels).
 
 ## Professional
 
-### Nets Oy
+### Nexi Digital Finland
 #### Payment terminals (2021 - present)
 
-At Nets my work involves credit & debit card payment terminals, mostly in LUA.
+At Nexi Digital Finland my work involves credit & debit card payment terminals. My role specifically is focused on the business logic inside the physical device into which the customer inserts their credit card.
+
+Assorted technologies I work with: C, LUA, Kotlin, Java, Javascript, Nodejs, Linux, Android, EMV, APDU, Ghidra
 
 ### Delicode Ltd
 #### Software developer (2014 - 2021)
@@ -127,6 +131,11 @@ Here's some projects for which I've made contributions:
 
 * [libfreenect2](https://github.com/openkinect/libfreenect2)
 * [Orbbec Astra SDK](https://github.com/orbbec/astra)
+
+### Farstrider Oy
+#### Novelist
+
+I write novels and publish them via my own [book publication business](https://farstrider.fi). My work is mostly fantasy of various types.
 
 ### KAAL
 #### Short film
