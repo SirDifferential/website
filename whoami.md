@@ -2,8 +2,6 @@
 
 My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood when I had an Amiga 500, which I still have in working order on my desk. My interests lay mainly in parallel computing, code optimization, hardware programming, 3D and graphics programming, video games, and procedural generation. I'm not interested in web development / mobile devices if I can avoid it. I prefer programming in C for its simplicity and understandable ecosystem.
 
-Beyond software development, I also write novels and do art (mostly for the novels).
-
 ## Professional
 
 ### Nexi Digital Finland
@@ -42,23 +40,62 @@ At renderfarm.fi I did coding, design, testing, customer support and server & da
 
 ## Personal
 
+### Farstrider Oy
+#### Novelist
+
+[![farstrider](pics/farstrider-web.png 'farstrider')](https://farstrider.fi)
+
+I write novels and publish them via my own [book publication business](https://farstrider.fi). My work is mostly fantasy of various types. Currently all my weekends and vacations are spent on this activity.
+
+* [Company website](https://farstrider.fi)
+
+### Art portfolio
+
+[![art portfolio](pics/artportfolio.png 'Art portfolio')](https://art.plantmonster.net)
+
+I started learning art in 2023 and wanted some place to share my progress, mainly so I could illustrate my own novels. I wanted a static website that was in my own control where I had to do minimal amount of work to publish the pieces.
+
+The solution I went with is simply parsing art piece filenames for the piece number and date, and reading an optional JSON file with description and licensing information.
+
+* [Live site](https://art.plantmonster.net)
+* [Github link](https://github.com/SirDifferential/art-portfolio)
+
+### Loathsome Bäsk Drinker
+#### Live gaming session turn timer
+
+[![baskdrinker](pics/baskdrinker.png 'Loathsome Bäsk Drinker')](https://github.com/SirDifferential/baskdrinker)
+
+We occasionally gather to play Souls-like games in a form of couch gaming. As we got too good in the games and no longer died (which was the turn control system earlier), we decided to start using a timer so people don't have to wait too long for their own turn. This called for an engineering solution.
+
+We wrote a software in Qt to define custom timers and warning sounds. Another software, the [Loathsome Pad Swapper](https://github.com/Sonicus/loathsome-pad-swapper), communicates with this software over a websocket API, toggling the currently active gamepad via [ViGemBus](https://github.com/nefarius/ViGEmBus) driver.
+
+This way two gamepads can be used on the couch, and upon hearing a warning sound, all that is needed is for people to pick up the currently inactive gamepad. Once the timer expires, control over the game is switched between the two controllers and the previously active gamepad is calmly and orderly passed to the new player waiting for their turn without anyone having to panic or toss the gamepads around.
+
+Honestly, we're kind of amazed this actually works.
+
+* [Github link](https://github.com/SirDifferential/baskdrinker)
+
 ### Derpling Uploader
 #### Starcraft 2 replay uploader
 
+[![derpling](pics/sc2replaystats.png 'Derpling Uploader')](https://github.com/SirDifferential/derpling_uploader)
+
 This is a tool I wrote to automatically upload Starcraft 2 replay files to sc2replaystats.com. They offer their own tool to perform the same task, but it's a closed source executable binary that requires admin privileges. I didn't feel like installing it on my computer, so I wrote my own auditable version instead.
 
-[Github link](https://github.com/SirDifferential/derpling_uploader)
+* [Github link](https://github.com/SirDifferential/derpling_uploader)
 
 #### Sonic 1 romhack
 
-![](pics/romhack_kekkonen2.png "romhack")
+[![romhack](pics/romhack_kekkonen2.png 'romhack')](https://github.com/pts-demos/s1disasm)
 
 We created a Sonic 1 romhack for a friend's bachelor party. You can read about it in [this](https://jessekaukonen.net/blog_romhack.html) blog entry.
+
+* [Github link](https://github.com/pts-demos/s1disasm)
 
 ### PTSD
 #### Sega Megadrive demo
 
-![](pics/ptsd_ukk.png "PTSD")
+[![ptsd](pics/ptsd_ukk.png 'ptsd')](https://bitbucket.org/ptsdemos/segademo)
 
 Our demo group, [PTS](http://www.pouet.net/groups.php?which=13815), released our first demo for the [Simulaatio 2018](http://www.pouet.net/party.php?which=1099&when=2018) demo party. This demo was the first time any of us worked with this hardware. Our expectations were largely limited to getting anything at all done and released, a goal we achieved after some party coding to wrap things up. As someone else put it, "It's not quite [Titan](http://www.pouet.net/prod.php?which=61724) yet, but that's the next one, right?"
 
@@ -69,25 +106,25 @@ Our demo group, [PTS](http://www.pouet.net/groups.php?which=13815), released our
 ### Proceduralis
 #### OpenCL based procedural world generator
 
-![](pics/proceduralis.png "Proceduralis")
+[![proceduralis](pics/proceduralis.png 'proceduralis')](https://github.com/SirDifferential/proceduralis)
 
 Ever since I played Dwarf Fortress I've been fascinated by procedural world generation. I had studied the basic tools used by such games, but never truly implemented them in practise. As I got into studying some OpenCL I suddenly figured it would be fun to create a world using the GPU's immense computational power. You can read more about this project in the relevant [blog entry](./blog_proceduralis.html).
 
-[Github link](https://github.com/SirDifferential/proceduralis)
+* [Github link](https://github.com/SirDifferential/proceduralis)
 
 ### Shiver's Balance Mod
 #### Star Control 2 online play improvement
 
-![](pics/balancemod.png "balance mod")
+[![balance mod](pics/balancemod.png 'balance-mod')](https://github.com/uqm-arena/balance-mod)
 
 Originally and mainly created by the fellow going by the username Shiver, the Balance Mod balances the very broken multiplayer supermelee of Star Control 2. The mod has been a work of love by Shiver, and to lesser part by myself and a few other people. I was mostly involved in testing early on, but performed some development and maintaining tasks later on.
 
-[Github link](https://github.com/uqm-arena/balance-mod)
+* [Github link](https://github.com/uqm-arena/balance-mod)
 
 ### Global Tech
 #### Europa Univeralis 4 modification
 
-![](pics/gtech.jpg "Global Tech")
+[![global tech](pics/gtech.jpg 'global tech')](https://steamcommunity.com/sharedfiles/filedetails/?id=258318354&searchtext=global+tech)
 
 A product of one day during which I wondered how EU4 would work if every nation in the game used western tech. After a spell of scripting the results were so fun I decided to publish the mod.
 
@@ -100,23 +137,23 @@ A product of one day during which I wondered how EU4 would work if every nation 
 
 Right, maybe I might have been slightly tired when I did this.
 
-[Github link](https://github.com/SirDifferential/instrument_controller)
+* [Github link](https://github.com/SirDifferential/instrument_controller)
 
 ### batchrender.py
 #### Sequential rendering plugin for Blender
 
-![](pics/batchrender.png "batchrender")
+[![batchrender](pics/batchrender.png 'batchrender')](https://github.com/SirDifferential/batch_render)
 
 Someone on IRC complained that Blender didn't have a tool for setting up sequential render tasks that the computer would automatically execute in a queue. As the Blender's Python API is pretty clear it didn't take long for me to write such a tool.
 
-[Github link](https://github.com/SirDifferential/batch_render)
+* [Github link](https://github.com/SirDifferential/batch_render)
 
 ### Website
 #### You're reading it
 
 I don't like web app development. I don't like Javascript, PHP or nodejs. I don't like websites that hog up hundreds of megs of memory and peg the CPUs on older computers to 100%. As such, my website is made entirely out of markdown turned into HTML with minimal amounts of extra junk, always served as static files, using the Github markdown style. The pages are created using a bash script and some Python. To this day I haven't found any problems with this system.
 
-[Github link](https://github.com/sirdifferential/website)
+* [Github link](https://github.com/sirdifferential/website)
 
 ### Story of a Lost Sky
 #### Touhou fangame RPG
@@ -131,11 +168,6 @@ Here's some projects for which I've made contributions:
 
 * [libfreenect2](https://github.com/openkinect/libfreenect2)
 * [Orbbec Astra SDK](https://github.com/orbbec/astra)
-
-### Farstrider Oy
-#### Novelist
-
-I write novels and publish them via my own [book publication business](https://farstrider.fi). My work is mostly fantasy of various types.
 
 ### KAAL
 #### Short film
