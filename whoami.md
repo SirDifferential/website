@@ -26,7 +26,7 @@ I was employed at [Delicode](https://www.delicode.com/) as a software developer.
 
 [Z-Vector](https://z-vector.com) is a real-time VJ visualization tool that creates a 3D point-cloud based visualizations out of the captured depth + color feed using an infrared camera. Z-Vector has been used for several music videos, such as [Kebu - Deep Blue](https://www.youtube.com/watch?v=A-6XqqYWzU8) and [Phantom - Scars](https://www.youtube.com/watch?v=HFpou6izBQg).
 
-Assorted technologies I worked with: C, C++, Assembly, ARM NEON & x86 SIMD, OpenGL, Python, Golang, Rust, Javascript, Nodejs, Qt, USB, UEFI / BIOS, Blender, Cinema 4D, Maya, 3ds Max
+Assorted technologies I worked with: C, C++, Assembly, ARM NEON & x86 SIMD, OpenGL, Python, Golang, Rust, Javascript, Nodejs, Qt, USB, UEFI / BIOS, Blender, Cinema 4D, Maya, 3ds Max, desktop software (Windows, Linux, MacOS)
 
 ### Tmi Jesse Kaukonen
 #### Entrepreneur (2010-2017)
@@ -34,13 +34,15 @@ Assorted technologies I worked with: C, C++, Assembly, ARM NEON & x86 SIMD, Open
 I ran my own software / 3D modeling business for several years, doing a few odd jobs here and there. This was mostly for some secondary income.
 
 ### Renderfarm.fi
-#### Distributed volunteer rendering (2010-2014)
+#### Software developer (2010-2014)
 
 <iframe width="500" height="300" src="https://www.youtube.com/embed/4VUWrZRCtI8" frameborder="0" allowfullscreen></iframe>
 
-During / after my intership at Turku Polytechnic I worked at a project called renderfarm.fi that utilized [BURP](http://burp.renderfarming.net/development/v2_files/) (Big and Ugly Rendering Project) for distributed volunteer rendering with [Blender](https://www.blender.org/) and [BOINC](https://boinc.berkeley.edu/) (Berkeley Open Infrastructure for Network Computing). This was my first real programming job and I learned a ton. Unfortunately the project wasn't viable as a business and ultimately went defunct.
+During / after my intership at Turku Polytechnic, I worked at a project called renderfarm.fi that utilized [BURP](http://burp.renderfarming.net/development/v2_files/) (Big and Ugly Rendering Project) for distributed volunteer rendering with [Blender](https://www.blender.org/) and [BOINC](https://boinc.berkeley.edu/) (Berkeley Open Infrastructure for Network Computing). This was my first real programming job and I learned a ton. Unfortunately the project wasn't viable as a business and ultimately went defunct.
 
-At renderfarm.fi I did coding, design, testing, customer support and server & database maintenance.
+At renderfarm.fi my tasks included coding, design, testing, customer support and server & database maintenance.
+
+Assorted technologies I worked with: C, C++, Java, BOINC, TCP/IP, desktop software (Windows, Linux, MacOS), MySQL
 
 ## Personal
 
