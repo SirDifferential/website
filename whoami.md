@@ -1,4 +1,4 @@
-# Who am I
+# Portfolio
 
 My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood when I had an Amiga 500, which I still have in working order on my desk. My interests lay mainly in parallel computing, code optimization, hardware programming, 3D and graphics programming, video games, and procedural generation. I'm not interested in web development / mobile devices if I can avoid it. I prefer programming in C for its simplicity and understandable ecosystem.
 
@@ -84,7 +84,8 @@ This is a tool I wrote to automatically upload Starcraft 2 replay files to sc2re
 
 * [Github link](https://github.com/SirDifferential/derpling_uploader)
 
-#### Sonic 1 romhack
+### Sonic 1 romhack
+#### Romhack for bachelor party
 
 [![romhack](pics/romhack_kekkonen2.png 'romhack')](https://github.com/pts-demos/s1disasm)
 
