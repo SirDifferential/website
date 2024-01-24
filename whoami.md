@@ -1,18 +1,20 @@
 # Portfolio
 
-My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood when I had an Amiga 500, which I still have in working order on my desk. My interests lay mainly in parallel computing, code optimization, hardware programming, 3D and graphics programming, video games, and procedural generation. I'm not interested in web development / mobile devices if I can avoid it. I prefer programming in C for its simplicity and understandable ecosystem.
+My name is Jesse Kaukonen. I'm a programmer and computer enthusiast located in Espoo, Finland. I've been interested in computers and video games since my early childhood when I had an Amiga 500, which I still have in working order on my desk. My interests lay mainly in parallel computing, code optimization, hardware programming, 3D and graphics programming, video games, and procedural generation. I'm not interested in web development if I can avoid it. I prefer programming in C for its simplicity and understandable ecosystem, and overall believe in strongly typed languages with a compiler spotting errors before they occur in runtime.
 
 ## Professional
 
 ### Nexi Digital Finland
-#### Payment terminals (2021 - present)
+#### Senior software developer in payment terminals (2021 - present)
 
 At Nexi Digital Finland my work involves credit & debit card payment terminals. My role specifically is focused on the business logic inside the physical device into which the customer inserts their credit card.
+
+This company was previously called Nets Denmark / Poplatek.
 
 Assorted technologies I work with: C, LUA, Kotlin, Java, Javascript, Nodejs, Linux, Android, EMV, APDU, Ghidra
 
 ### Delicode Ltd
-#### Software developer (2014 - 2021)
+#### Lead software developer (2014 - 2021)
 
 <iframe width="500" height="300" src="https://www.youtube.com/embed/A-6XqqYWzU8" frameborder="0" allowfullscreen></iframe>
 
@@ -24,10 +26,12 @@ I was employed at [Delicode](https://www.delicode.com/) as a software developer.
 
 [Z-Vector](https://z-vector.com) is a real-time VJ visualization tool that creates a 3D point-cloud based visualizations out of the captured depth + color feed using an infrared camera. Z-Vector has been used for several music videos, such as [Kebu - Deep Blue](https://www.youtube.com/watch?v=A-6XqqYWzU8) and [Phantom - Scars](https://www.youtube.com/watch?v=HFpou6izBQg).
 
+Assorted technologies I worked with: C, C++, Assembly, ARM NEON & x86 SIMD, OpenGL, Python, Golang, Rust, Javascript, Nodejs, Qt, USB, UEFI / BIOS, Blender, Cinema 4D, Maya, 3ds Max
+
 ### Tmi Jesse Kaukonen
 #### Entrepreneur (2010-2017)
 
-I ran my own business for several years, doing a few odd jobs here and there. This was mostly for some secondary income. I mostly did programming, consulting and 3D modelling.
+I ran my own software / 3D modeling business for several years, doing a few odd jobs here and there. This was mostly for some secondary income.
 
 ### Renderfarm.fi
 #### Distributed volunteer rendering (2010-2014)
@@ -109,7 +113,7 @@ Our demo group, [PTS](http://www.pouet.net/groups.php?which=13815), released our
 
 [![proceduralis](pics/proceduralis.png 'proceduralis')](https://github.com/SirDifferential/proceduralis)
 
-Ever since I played Dwarf Fortress I've been fascinated by procedural world generation. I had studied the basic tools used by such games, but never truly implemented them in practise. As I got into studying some OpenCL I suddenly figured it would be fun to create a world using the GPU's immense computational power. You can read more about this project in the relevant [blog entry](./blog_proceduralis.html).
+Ever since I first played Dwarf Fortress, I've been fascinated by procedural world generation. While I had studied the basic tools used by such games, I never truly implemented them in practise. As I got into studying some OpenCL, I suddenly figured it would be fun to create a world using the GPU's immense computational power. You can read more about this project in the relevant [blog entry](./blog_proceduralis.html).
 
 * [Github link](https://github.com/SirDifferential/proceduralis)
 
@@ -136,7 +140,7 @@ A product of one day during which I wondered how EU4 would work if every nation 
 
 <iframe width="500" height="300" src="https://www.youtube.com/embed/aRz1xe9Kff8" frameborder="0" allowfullscreen></iframe>
 
-Right, maybe I might have been slightly tired when I did this.
+A software that reads data from a MIDI keyboard and converts that into keyboard events, allowing playing video games via MIDI input.
 
 * [Github link](https://github.com/SirDifferential/instrument_controller)
 
@@ -152,23 +156,21 @@ Someone on IRC complained that Blender didn't have a tool for setting up sequent
 ### Website
 #### You're reading it
 
-I don't like web app development. I don't like Javascript, PHP or nodejs. I don't like websites that hog up hundreds of megs of memory and peg the CPUs on older computers to 100%. As such, my website is made entirely out of markdown turned into HTML with minimal amounts of extra junk, always served as static files, using the Github markdown style. The pages are created using a bash script and some Python. To this day I haven't found any problems with this system.
+My website is made entirely out of markdown turned into HTML with minimal amounts of extra junk, always served as static files, using the Github markdown style. The pages are created using a bash script and some Python. To this day I haven't found any problems with this system. It's minimal and works, no need for bloated frameworks or vulnerable dependencies.
 
 * [Github link](https://github.com/sirdifferential/website)
 
 ### Story of a Lost Sky
 #### Touhou fangame RPG
 
-I ran into a Touhou fan project I liked, found a couple of bugs and ended up doing dedicated testing for a while.
-
-[Main site](http://featheredmelody.com/index.html)
+I ran into a Touhou fan game project I liked, found a couple of bugs and ended up doing dedicated testing for a while. Unfortunately the website for this game is no longer around.
 
 ### Free software contributions
 
 Here's some projects for which I've made contributions:
 
 * [libfreenect2](https://github.com/openkinect/libfreenect2)
-* [Orbbec Astra SDK](https://github.com/orbbec/astra)
+* [Now defunct Orbbec Astra SDK](https://github.com/orbbec/astra), replaced by the [new SDK](https://github.com/orbbec/OrbbecSDK)
 
 ### KAAL
 #### Short film
