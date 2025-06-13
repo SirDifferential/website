@@ -1,3 +1,4 @@
+* 2025-06-13 [New directions](./blog_novelist.html)
 * 2019-05-26 [Sonic 1 bachelor party romhack](./blog_romhack.html)
 * 2018-08-05 [ptsd - Sega Megadrive demo](./blog_ptsd.html)
 * 2018-07-28 [Laskuvarjotaisto](./blog_gamejam2.html)
